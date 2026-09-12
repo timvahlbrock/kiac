@@ -1,0 +1,70 @@
+pkg/runtime/publish.go
+  s_06e704fd3a094e::t_0e0d47435fbf22 1-161
+pkg/cluster/mount_test.go
+  s_06e704fd3a094e::t_af08e96cc2215c 18,32-37
+pkg/cluster/configfile.go
+  s_06e704fd3a094e::t_98cf6ca46f7597 32,124-131
+  s_06e704fd3a094e::t_63db54ba4c4ab2 132
+pkg/cluster/gpu_k3s.go
+  s_06e704fd3a094e::t_fe0aabf0c62f7b 266-268
+examples/cluster-full.yaml
+  s_06e704fd3a094e::t_16fa408273d85b 77-84
+README.md
+  s_06e704fd3a094e::t_6d776ee144d10c 81
+  s_06e704fd3a094e::t_85472021501872 270,314
+pkg/cluster/cluster.go
+  s_06e704fd3a094e::t_e7ab2e173a27c7 505-511
+  s_06e704fd3a094e::t_6380289ac1d662 124,224-226,512-518,520
+pkg/runtime/container.go
+  s_06e704fd3a094e::t_03a15767253fae 140,175-176
+  s_06e704fd3a094e::t_a733ddd9c44365 177
+pkg/runtime/publish_test.go
+  s_06e704fd3a094e::t_ef60ce954d842a 1-47
+pkg/cluster/k3s.go
+  s_06e704fd3a094e::t_b03c55b4855c71 167,252
+  s_06e704fd3a094e::t_d104add1f14877 253-254
+pkg/runtime/krunkit.go
+  s_06e704fd3a094e::t_f89e75ffbf1c28 219-220
+cmd/create.go
+  s_06e704fd3a094e::t_947cce45fa6f43 28,69-71,175
+pkg/cluster/gpu_dra_test.go
+  s_06e704fd3a094e::t_ee7618f1082516 64,72
+  s_06e704fd3a094e::t_dcc3115410055e 65-71
+  s_06e704fd3a094e::t_8b305a24798e51 73
+examples/cluster.yaml
+  s_06e704fd3a094e::t_b3403c9622cd0b 21-23
+pkg/cluster/configfile_test.go
+  s_06e704fd3a094e::t_ca20bde560c3f4 381-385
+  s_06e704fd3a094e::t_98c1addab262a1 197,230,268,288,311,335-357
+  s_06e704fd3a094e::t_f07fa1000456db 334
+pkg/cluster/k3s_test.go
+  s_06e704fd3a094e::t_b9c33c07f1413c 180,199-201,220-222
+pkg/runtime/container_test.go
+  s_06e704fd3a094e::t_91cd9c718a8de9 362,371-372,379,382
+  s_06e704fd3a094e::t_bf26e1b3cda920 359-361,363-370,376-377
+  s_06e704fd3a094e::t_2159bedf202bb3 373-375
+  s_06e704fd3a094e::t_9e1f3a887ccf07 378
+  s_06e704fd3a094e::t_311c0eed4ece78 380-381
+  s_06e704fd3a094e::t_45d0dbb0d6ccff 383-384
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6b601023d8282343505761c4934352252fcf4fbb",
+  "prompts": {},
+  "humans": {
+    "h_93aa6953970f4f": {
+      "author": "Tim Vahlbrock <tim@vahlbrock.de>"
+    }
+  },
+  "sessions": {
+    "s_06e704fd3a094e": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "5ee53eb4-1f30-4dfc-83c6-6438fd06f8dd",
+        "model": "unknown"
+      },
+      "human_author": "Tim Vahlbrock <tim@vahlbrock.de>"
+    }
+  }
+}
