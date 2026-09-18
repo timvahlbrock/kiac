@@ -1,0 +1,29 @@
+README.md
+  s_645585294ba17d::t_f87fe6b8b656d3 271,315-317
+cmd/create.go
+  s_645585294ba17d::t_5a9542c3aa7668 182-184
+examples/cluster-full.yaml
+  s_645585294ba17d::t_ce5f8eb979d2ac 81-82,89
+examples/cluster.yaml
+  s_645585294ba17d::t_507b9058fc9b9f 22,26,30
+pkg/cluster/k3s.go
+  s_645585294ba17d::t_ec9f4a359a668f 83-90,96-117
+pkg/cluster/k3s_test.go
+  s_645585294ba17d::t_ce929559300a92 186-188,192-210
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "683924512917f6fb09238a37d4e6aaf1d7a52650",
+  "prompts": {},
+  "sessions": {
+    "s_645585294ba17d": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "d8fcced0-54ff-48bb-b1d8-f84119de67ad",
+        "model": "unknown"
+      },
+      "human_author": "Tim Vahlbrock <tim@vahlbrock.de>"
+    }
+  }
+}
