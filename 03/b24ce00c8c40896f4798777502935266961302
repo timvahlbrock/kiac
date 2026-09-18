@@ -1,0 +1,25 @@
+pkg/cluster/mount_test.go
+  s_645585294ba17d::t_b63ddb8b592139 12
+pkg/runtime/publish.go
+  s_645585294ba17d::t_b63ddb8b592139 54,102,104-105,108-112
+pkg/runtime/publish_test.go
+  s_645585294ba17d::t_b63ddb8b592139 47-49
+pkg/cluster/k3s_test.go
+  s_645585294ba17d::t_eecab5c74d532a 174
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "03b24ce00c8c40896f4798777502935266961302",
+  "prompts": {},
+  "sessions": {
+    "s_645585294ba17d": {
+      "agent_id": {
+        "tool": "github-copilot-cli",
+        "id": "d8fcced0-54ff-48bb-b1d8-f84119de67ad",
+        "model": "unknown"
+      },
+      "human_author": "Tim Vahlbrock <tim@vahlbrock.de>"
+    }
+  }
+}
