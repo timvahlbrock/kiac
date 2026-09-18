@@ -80,9 +80,39 @@ func k3sAgentArgs(cfg Config, nodeName string) []string {
 }
 
 func validateK3sArgs(values []string, flag string) error {
+	managedDisable := map[string]struct{}{
+		"traefik":                {},
+		"servicelb":              {},
+		"metrics-server":         {},
+		"local-storage":          {},
+		"network-policy":         {},
+		"disable-network-policy": {},
+	}
 	for _, v := range values {
 		if strings.TrimSpace(v) == "" {
 			return fmt.Errorf("%s does not accept an empty value", flag)
+		}
+	}
+	for i := range values {
+		raw := strings.TrimSpace(values[i])
+		name, value, hasValue := strings.Cut(raw, "=")
+		switch name {
+		case "--cluster-cidr", "--service-cidr", "--node-name", "--flannel-backend", "--disable-network-policy":
+			return fmt.Errorf("%s does not allow overriding %s; kiac manages it", flag, name)
+		case "--disable":
+			var disabled string
+			switch {
+			case hasValue:
+				disabled = value
+			case i+1 < len(values):
+				disabled = strings.TrimSpace(values[i+1])
+			}
+			for _, item := range strings.Split(disabled, ",") {
+				item = strings.TrimSpace(item)
+				if _, managed := managedDisable[item]; managed {
+					return fmt.Errorf("%s does not allow overriding --disable=%s; kiac manages it", flag, item)
+				}
+			}
 		}
 	}
 	return nil

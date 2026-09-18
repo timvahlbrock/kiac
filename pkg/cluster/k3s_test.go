@@ -183,8 +183,30 @@ func TestValidateK3sArgs(t *testing.T) {
 	if err := validateK3sArgs([]string{"--tls-san", "api.dev.test"}, "--k3s-server-arg"); err != nil {
 		t.Fatalf("valid args rejected: %v", err)
 	}
+	if err := validateK3sArgs([]string{"--disable=helm-controller"}, "--k3s-server-arg"); err != nil {
+		t.Fatalf("valid --disable value rejected: %v", err)
+	}
 	if err := validateK3sArgs([]string{"", "api.dev.test"}, "--k3s-server-arg"); err == nil {
 		t.Fatal("empty k3s arg accepted")
+	}
+	for _, tc := range []struct {
+		name string
+		args []string
+	}{
+		{name: "managed cluster-cidr", args: []string{"--cluster-cidr=10.123.0.0/16"}},
+		{name: "managed service-cidr", args: []string{"--service-cidr=10.96.0.0/12"}},
+		{name: "managed node-name", args: []string{"--node-name", "custom-node"}},
+		{name: "managed flannel-backend", args: []string{"--flannel-backend=vxlan"}},
+		{name: "managed network-policy toggle", args: []string{"--disable-network-policy"}},
+		{name: "managed disable equals", args: []string{"--disable=traefik"}},
+		{name: "managed disable split", args: []string{"--disable", "servicelb"}},
+		{name: "managed disable list", args: []string{"--disable=foo,local-storage,bar"}},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			if err := validateK3sArgs(tc.args, "--k3s-server-arg"); err == nil {
+				t.Fatalf("managed k3s args accepted: %q", tc.args)
+			}
+		})
 	}
 }
 
