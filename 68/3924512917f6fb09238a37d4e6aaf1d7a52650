@@ -1,15 +1,30 @@
 README.md
   s_645585294ba17d::t_f87fe6b8b656d3 271,315-317
+  s_645585294ba17d::t_df164d46b9849e 271,315-317
 cmd/create.go
   s_645585294ba17d::t_5a9542c3aa7668 182-184
+  s_645585294ba17d::t_710ec5c990db08 182-184
 examples/cluster-full.yaml
   s_645585294ba17d::t_ce5f8eb979d2ac 81-82,89
+  s_645585294ba17d::t_45ecfc9ca2d24b 81-82,89
 examples/cluster.yaml
   s_645585294ba17d::t_507b9058fc9b9f 22,26,30
+  s_645585294ba17d::t_eb771042c6c2bf 22,26,30
 pkg/cluster/k3s.go
   s_645585294ba17d::t_ec9f4a359a668f 83-90,96-117
+  s_645585294ba17d::t_873b31f91113bb 83,89-90,96-115,117
+  s_645585294ba17d::t_6b92ab593f4242 84-88
+  s_645585294ba17d::t_a8ca276ad91dfa 116
 pkg/cluster/k3s_test.go
   s_645585294ba17d::t_ce929559300a92 186-188,192-210
+  s_645585294ba17d::t_f27e7b21dfe1c9 186
+  s_645585294ba17d::t_2faa9cb82b81d6 187-188,192-210,215
+pkg/runtime/publish.go
+  s_645585294ba17d::t_7ef4c560adba51 54,102,104-105,108-112
+pkg/runtime/publish_test.go
+  s_645585294ba17d::t_a4a4fa7a4de85d 47-49
+pkg/cluster/mount_test.go
+  s_645585294ba17d::t_5b5f010f4bbb93 12
 ---
 {
   "schema_version": "authorship/3.0.0",
