@@ -51,7 +51,7 @@ func (p *Publishes) String() string {
 	return strings.Join(*p, ";")
 }
 
-func (*Publishes) Type() string { return "publish" }
+func (*Publishes) Type() string { return "mapping" }
 
 // ParsePublish parses [host-ip:]host-port:container-port[/protocol].
 func ParsePublish(value string) (Publish, error) {
@@ -99,10 +99,17 @@ func ParsePublish(value string) (Publish, error) {
 
 // ValidatePublishes rejects malformed --publish mappings.
 func ValidatePublishes(specs []string) error {
+	seen := make(map[string]int, len(specs))
 	for i, spec := range specs {
-		if _, err := ParsePublish(spec); err != nil {
+		mapping, err := ParsePublish(spec)
+		if err != nil {
 			return fmt.Errorf("publish %d: %w", i+1, err)
 		}
+		normalized := mapping.String()
+		if first, ok := seen[normalized]; ok {
+			return fmt.Errorf("publish %d duplicates publish %d (%s)", i+1, first, normalized)
+		}
+		seen[normalized] = i + 1
 	}
 	return nil
 }

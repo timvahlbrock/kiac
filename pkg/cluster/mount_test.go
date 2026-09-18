@@ -9,6 +9,7 @@ import (
 
 func TestKubeadmNodeRunOptsCarryMounts(t *testing.T) {
 	cfg := Config{
+		Name:     "dev",
 		Image:    "docker.io/kindest/node:v1.36.0",
 		CPUs:     "4",
 		Memory:   "2G",

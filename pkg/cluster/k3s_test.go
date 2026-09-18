@@ -171,6 +171,7 @@ func TestK3sAgentArgsAndEnv(t *testing.T) {
 
 func TestK3sRunOptsCarryKernel(t *testing.T) {
 	cfg := Config{
+		Name:     "dev",
 		Image:    "docker.io/rancher/k3s:v1.36.2-k3s1",
 		CPUs:     "4",
 		Memory:   "2G",

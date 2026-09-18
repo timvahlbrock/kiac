@@ -44,4 +44,7 @@ func TestValidatePublishes(t *testing.T) {
 	if err := ValidatePublishes([]string{"127.0.0.1:abc:80"}); err == nil {
 		t.Fatal("invalid publish accepted")
 	}
+	if err := ValidatePublishes([]string{"8080:80", "8080:80"}); err == nil {
+		t.Fatal("duplicate publish accepted")
+	}
 }
